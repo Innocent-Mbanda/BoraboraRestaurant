@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class JavaCupMain {
 
-
     public static void main(String[] args) {
 
         int userInput;
@@ -10,7 +9,7 @@ public class JavaCupMain {
                 "BoraboraRestaurant"
         );
         do {
-            System.out.println("What would you like to do?"
+            System.out.println("What would you like to do?\n"
                     + "1 -Add new order?\n"
                     + "2 -show the orders \n"
                     + "3 -Exit ?"
