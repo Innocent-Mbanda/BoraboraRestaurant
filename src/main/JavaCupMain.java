@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class JavaCupMain {
@@ -21,7 +23,7 @@ public class JavaCupMain {
 
             switch (userInput){
                 case 1:
-                    addNewOrder();
+                    addNewOrder(sn);
                     break;
                 case 2:
                     showOrders();
@@ -35,8 +37,17 @@ public class JavaCupMain {
         } while (userInput !=3);
         }
 
-    private static void addNewOrder(){
+    private static void addNewOrder(Scanner sn){
         System.out.println("add new order");
+        ArrayList<MenuItem> listOfItems = new Menu().getMenuItems();
+//        System.out.println("Select Item to order" );
+        for (int i =0; i <listOfItems.size();i ++){
+            System.out.println( i + " " +listOfItems.get(i).getName());
+        }
+        int userInput = sn.nextInt();
+        Order order = new Order();
+
+
     }
     private static void showOrders(){
         System.out.println("Show all the order you selected");
